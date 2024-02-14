@@ -9,12 +9,46 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FAssign">
-
-
-        <activity android:name=".splash.SplashActivity"
+        <activity
+            android:name=".homepage.viewstory.viewstory"
+            android:exported="false" />
+        <activity
+            android:name=".homepage.search.search"
+            android:exported="false" />
+        <activity
+            android:name=".warning.warning"
+            android:exported="false" />
+        <activity
+            android:name=".homepage.addstory.addstory"
+            android:exported="false" />
+        <activity
+            android:name=".welcome.login.loginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".homepage.homePage"
+            android:exported="false" />
+        <activity
+            android:name=".profile.changepassword.changepassword"
+            android:exported="false" />
+        <activity
+            android:name=".profile.editProfile.editprofile"
+            android:exported="false" />
+        <activity
+            android:name=".profile.viewProfile"
+            android:exported="false" />
+        <activity
+            android:name=".welcome.register.register_activity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:exported="false"
+            android:label="@string/title_activity_login" />
+        <activity
+            android:name=".splash.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

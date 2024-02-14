@@ -102,7 +102,7 @@
             android:backgroundTint="@color/splash"
             android:text="@string/login"
             android:textColor="@color/white"
-            app:rippleColor="@color/splash"
+            app:rippleColor="@color/lightersplash"
             app:strokeColor="@color/splash" />
 
         <LinearLayout
@@ -144,7 +144,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="@color/lightersplash"
             android:text="@string/sign_up"
-            app:rippleColor="#E10808" />
+            app:rippleColor="@color/splash" />
     </LinearLayout>
 
 
