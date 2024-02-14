@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">FAssign</string>
+    <string name="splashimage">Image when app starts</string>
+    <string name="pictures_on_the_top_application">Pictures on the top application</string>
+    <string name="login">Login</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="story">Story</string>
+    <string name="welcome_to">Welcome to</string>
+    <string name="welcome_to_description">Text above title\n</string>
+    <string name="story_description">title half</string>
+    <string name="time">Time</string>
+    <string name="or">or</string>
+</resources>
