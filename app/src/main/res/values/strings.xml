@@ -31,12 +31,24 @@
     <string name="gender">Gender</string>
     <string name="confirmemail">Confirmed Email</string>
     <string name="confirmpassword">Confirmed Password</string>
+    <string name="currentpassword">Current Password</string>
+    <string name="newpassword">New Password</string>
+
     <string name="addprofilepic">Add a Profile Picture</string>
     <string name="uploadpic">Upload Button</string>
     <string name="changepw">Change Password</string>
     <string name="editpfp">Edit Profile</string>
     <string name="examplename">John Doe</string>
     <string name="deleteacc">Delete Account</string>
+    <string name="description">Your Story Description</string>
+    <string name="storytitle">Title</string>
+    <string name="addpic">Add Pictures for the Story</string>
+    <string name="Content">Your Story of content goes here</string>
+    <string name="email">Change Email</string>
+    <string name="savechanges">Save Changes</string>
+    <string name="editinfo">Edit Information</string>
+    <string name="warnings">Are you sure you wanted to Delete it?</string>
+    <string name="delete">Delete</string>
 
 
 </resources>

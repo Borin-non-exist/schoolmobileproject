@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "6615115983",
+    "project_id": "unimobileproject-69c7a",
+    "storage_bucket": "unimobileproject-69c7a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:6615115983:android:73779a7077773730062fba",
+        "android_client_info": {
+          "package_name": "com.example.fassign"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6Rv7dE1KfBV5XwqPK415TnRnFADppi9o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
