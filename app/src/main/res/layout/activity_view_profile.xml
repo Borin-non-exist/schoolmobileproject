@@ -1,9 +1,145 @@
-<?xml version="1.0" encoding="utf-8"?>
+<!-- Welcome activity layout -->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/WholescreenLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".profile.viewProfile">
+    android:background="@color/backgroundgray">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/imagelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="500dp"
+        android:accessibilityTraversalAfter="@id/loginButton"
+        android:background="@drawable/banner_app"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="94dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="93dp"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/circle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/addpicture"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="16dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="84dp"
+                android:layout_marginBottom="24dp"
+                android:contentDescription="shit click to add photo"
+                android:src="@drawable/addimage"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="135dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="124dp"
+            android:layout_marginBottom="1dp"
+            android:text="@string/examplename"
+            android:textSize="36sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="410dp"
+        android:layout_height="498dp"
+        android:background="@drawable/loginflags"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imagelayout">
+
+        <Button
+            android:id="@+id/editbutton"
+            android:layout_width="350dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="29dp"
+            android:layout_marginTop="47dp"
+            android:layout_marginEnd="31dp"
+            android:backgroundTint="@color/backgroundgray"
+            android:drawableTint="@color/black"
+            android:foregroundTint="@color/black"
+            android:shadowColor="#000000"
+            android:text="@string/editpfp"
+            android:textColor="#000000"
+            android:textColorHighlight="#B1AEAE"
+            android:textColorHint="#000000"
+            android:textColorLink="#000000"
+            app:cornerRadius="15dp"
+            app:iconTint="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/changepwbutton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:rippleColor="#000000"
+            app:strokeColor="#8FC4E1"
+            app:strokeWidth="2dp" />
+
+        <Button
+            android:id="@+id/changepwbutton"
+            android:layout_width="350dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="29dp"
+            android:layout_marginTop="27dp"
+            android:layout_marginEnd="31dp"
+            android:backgroundTint="@color/buttonstrokecolor"
+            android:text="@string/changepw"
+            android:textColor="#000000"
+            app:cornerRadius="15dp"
+            app:layout_constraintBottom_toTopOf="@+id/deleteaccount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editbutton"
+            app:strokeColor="#8FC4E1"
+            app:strokeWidth="2dp" />
+
+        <Button
+            android:id="@+id/deleteaccount"
+            android:layout_width="350dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="29dp"
+            android:layout_marginTop="183dp"
+            android:layout_marginEnd="31dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#FFFFFF"
+            android:text="@string/deleteacc"
+            android:textColor="#FF0000"
+            app:cornerRadius="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/changepwbutton"
+            app:strokeColor="#FF0000"
+            app:strokeWidth="2dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

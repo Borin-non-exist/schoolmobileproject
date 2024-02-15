@@ -5,4 +5,6 @@
     <color name="splash">#019B88</color>
     <color name="lightersplash">#69BAB0</color>
     <color name="backgroundgray">#E1E0E1</color>
+    <color name="darkgray">#898886</color>
+    <color name="buttonstrokecolor">#8FC4E1</color>
 </resources>

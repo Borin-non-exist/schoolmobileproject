@@ -19,4 +19,24 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+    <string name="enter_email">Email</string>
+    <string name="enter_password">Password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="back">Back</string>
+    <string name="lastnameenter">Enter Your Last Name</string>
+    <string name="lastname">Last Name</string>
+    <string name="firstname">First Name</string>
+    <string name="dob">Date of Birth</string>
+    <string name="next">Next</string>
+    <string name="gender">Gender</string>
+    <string name="confirmemail">Confirmed Email</string>
+    <string name="confirmpassword">Confirmed Password</string>
+    <string name="addprofilepic">Add a Profile Picture</string>
+    <string name="uploadpic">Upload Button</string>
+    <string name="changepw">Change Password</string>
+    <string name="editpfp">Edit Profile</string>
+    <string name="examplename">John Doe</string>
+    <string name="deleteacc">Delete Account</string>
+
+
 </resources>

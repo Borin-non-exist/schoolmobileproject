@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FAssign">
         <activity
+            android:name=".welcome.register.addphoto"
+            android:exported="false" />
+        <activity
+            android:name=".welcome.register.register_activity2"
+            android:exported="false" />
+        <activity
             android:name=".homepage.viewstory.viewstory"
             android:exported="false" />
         <activity

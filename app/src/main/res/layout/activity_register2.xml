@@ -24,12 +24,11 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_margin="16dp"
+            android:contentDescription="Button will go back to the previous"
             android:src="@drawable/ic_back_arrow"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:contentDescription="Button will go back to the previous"
             tools:ignore="HardcodedText" />
-
 
         <ImageView
 
@@ -60,7 +59,7 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/login"
+            android:text="@string/sign_in"
             android:textSize="27sp"
             android:textStyle="bold"
             android:translationX="45dp"
@@ -71,92 +70,68 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/loginflow"
+        android:id="@+id/signinfield"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginStart="15dp"
         android:layout_marginTop="300dp"
         android:layout_marginEnd="15dp"
-        android:layout_marginBottom="225dp"
+        android:layout_marginBottom="200dp"
         android:accessibilityTraversalAfter="@id/loginButton"
         android:background="@drawable/loginflags"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
-        <!-- Email EditText -->
+
         <EditText
-            android:id="@+id/emailEditText"
+            android:id="@+id/lastnameenter"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="35dp"
             android:layout_marginEnd="24dp"
+            android:autofillHints=""
             android:hint="@string/enter_email"
+            android:inputType="textPassword"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:autofillHints="sth@gmail.com"
-            />
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <!-- Password EditText -->
         <EditText
-            android:id="@+id/passwordEditText"
+            android:id="@+id/gender"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="100dp"
             android:layout_marginEnd="24dp"
+            android:layout_marginBottom="30dp"
+            android:autofillHints=""
             android:hint="@string/enter_password"
-            android:inputType="textPassword"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/emailEditText"
-            android:autofillHints="SomeThing" />
+            app:layout_constraintTop_toTopOf="parent" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-
     <Button
-        android:id="@+id/loginbutton"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="275dp"
-        android:layout_marginTop="138dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginBottom="39dp"
+        android:id="@+id/nextbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
         android:backgroundTint="#019B88"
-        android:shadowColor="#000000"
-        android:text="@string/login"
-        app:cornerRadius="15dp"
+        android:drawableTint="#019B88"
+        android:text="@string/next"
+        app:cornerRadius="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginflow"
-        app:layout_constraintVertical_bias="0.5"
-        app:rippleColor="#00BCD4"
-        app:strokeColor="#009688" />
+        app:layout_constraintTop_toBottomOf="@+id/signinfield"
+        tools:layout_editor_absoluteX="161dp" />
 
-
-    <Button
-        android:id="@+id/backbutton"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="138dp"
-        android:layout_marginEnd="18dp"
-        android:layout_marginBottom="37dp"
-        android:backgroundTint="#FFFFFF"
-        android:shadowColor="@color/black"
-        android:text="@string/back"
-        android:textColor="#000000"
-        app:cornerRadius="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/loginbutton"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginflow"
-        app:rippleColor="#00BCD4"
-        app:strokeColor="#000000" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
