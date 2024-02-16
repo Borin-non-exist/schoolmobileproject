@@ -19,6 +19,25 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <ImageButton
+            android:id="@+id/button_topleft"
+            android:layout_width="75dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="334dp"
+            android:layout_weight="2.0"
+            android:adjustViewBounds="true"
+            android:backgroundTint="@color/splash"
+            android:contentDescription="@string/back"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/ic_back_arrow" />
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout"
             android:layout_width="150dp"
@@ -112,6 +131,24 @@
             android:layout_marginEnd="31dp"
             android:backgroundTint="@color/buttonstrokecolor"
             android:text="@string/changepw"
+            android:textColor="#000000"
+            app:cornerRadius="15dp"
+            app:layout_constraintBottom_toTopOf="@+id/deleteaccount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editbutton"
+            app:strokeColor="#8FC4E1"
+            app:strokeWidth="2dp" />
+
+        <Button
+            android:id="@+id/logoutbutton"
+            android:layout_width="350dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="29dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="31dp"
+            android:backgroundTint="#FFEB3B"
+            android:text="@string/logout"
             android:textColor="#000000"
             app:cornerRadius="15dp"
             app:layout_constraintBottom_toTopOf="@+id/deleteaccount"

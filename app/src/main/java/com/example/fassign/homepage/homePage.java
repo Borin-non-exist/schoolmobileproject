@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
+
 import com.example.fassign.R;
 import com.example.fassign.homepage.addstory.addstory;
 import com.example.fassign.profile.viewProfile;
@@ -26,6 +28,9 @@ public class homePage extends AppCompatActivity {
     private FirebaseFirestore db;
     private FirebaseUser currentUser;
 
+    private TextView usernameTextView;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +41,8 @@ public class homePage extends AppCompatActivity {
         meButton = findViewById(R.id.mebutton);
         plusButton = findViewById(R.id.button_topleft);
         homeBannerProfileImageView = findViewById(R.id.homeBannerProfileImageView);
+        usernameTextView = findViewById(R.id.usernameTextView);
+
 
         // Initialize Firebase components
         db = FirebaseFirestore.getInstance();
@@ -107,4 +114,5 @@ public class homePage extends AppCompatActivity {
                     });
         }
     }
+
 }
