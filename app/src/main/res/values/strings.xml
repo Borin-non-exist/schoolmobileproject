@@ -49,6 +49,8 @@
     <string name="editinfo">Edit Information</string>
     <string name="warnings">Are you sure you wanted to Delete it?</string>
     <string name="delete">Delete</string>
+    <string name="home">Home</string>
+    <string name="me">Me</string>
 
 
 </resources>
