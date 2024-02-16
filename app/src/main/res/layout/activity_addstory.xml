@@ -111,6 +111,7 @@
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="25dp"
                     android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="50dp"
                     android:autofillHints="SomeThing"
                     android:hint="@string/storytitle"
                     android:inputType="textPassword"

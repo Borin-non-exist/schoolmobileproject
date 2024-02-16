@@ -32,6 +32,7 @@
             <!-- Home Button -->
 
             <!-- User Profile Image -->
+
             <ImageButton
                 android:id="@+id/homebutton"
                 android:layout_width="75dp"
@@ -53,16 +54,26 @@
                 app:layout_constraintVertical_bias="1.0"
                 app:srcCompat="@drawable/home" />
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/userProfileImageView"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_marginStart="128dp"
-                android:layout_marginTop="12dp"
-                android:src="@drawable/default_profile_image"
-                android:contentDescription="@string/description"
-                app:layout_constraintStart_toEndOf="@+id/homebutton"
-                app:layout_constraintTop_toTopOf="@id/homebutton" />
+            <ImageButton
+                android:id="@+id/mebutton"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginStart="74dp"
+                android:layout_marginEnd="69dp"
+                android:layout_marginBottom="16dp"
+                android:layout_weight="2.0"
+                android:adjustViewBounds="true"
+                android:backgroundTint="@color/splash"
+                android:contentDescription="@string/home"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0"
+                app:srcCompat="@drawable/default_profile_image" />
 
             <!-- "Me" TextView -->
             <TextView
@@ -144,16 +155,19 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0" />
 
+            <!-- Add this TextView under the "Welcome" TextView -->
+
+
             <TextView
-                android:id="@+id/userFirstNameTextView"
-                android:layout_width="250dp"
+                android:id="@+id/usernameTextView"
+                android:layout_width="200dp"
                 android:layout_height="50dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
                 android:text=""
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="@id/homebanner"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.16"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toStartOf="@id/homebanner"
                 app:layout_constraintTop_toBottomOf="@id/textView11"
                 app:layout_constraintVertical_bias="1.0" />
 

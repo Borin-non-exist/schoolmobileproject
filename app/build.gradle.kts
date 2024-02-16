@@ -34,6 +34,7 @@ android {
 
 dependencies {
 
+    implementation ("com.squareup.picasso:picasso:2.71828")
     implementation ("de.hdodenhof:circleimageview:3.1.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.11.0")
@@ -44,6 +45,7 @@ dependencies {
     implementation("com.google.firebase:firebase-database:20.3.0")
     implementation("com.google.firebase:firebase-auth:22.3.1")
     implementation("com.google.firebase:firebase-storage:20.3.0")
+    implementation("com.google.firebase:firebase-firestore:24.10.2")
     testImplementation("junit:junit:4.13.2")
     implementation ("com.google.firebase:firebase-database:20.3.0")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
