@@ -13,6 +13,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 import com.squareup.picasso.Picasso;
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -26,6 +28,11 @@ public class homePage extends AppCompatActivity {
 
     private FirebaseFirestore db;
     private FirebaseUser currentUser;
+    private FirebaseStorage firebaseStorage;
+    private StorageReference storageReference;
+
+    private static final String DEFAULT_PROFILE_URL = "your_default_profile_image_url_here";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +48,8 @@ public class homePage extends AppCompatActivity {
 
         db = FirebaseFirestore.getInstance();
         currentUser = FirebaseAuth.getInstance().getCurrentUser();
+        firebaseStorage = FirebaseStorage.getInstance();
+        storageReference = firebaseStorage.getReference().child("profile_pictures");
 
         // Set click listeners
         homeButton.setOnClickListener(new View.OnClickListener() {
@@ -81,24 +90,29 @@ public class homePage extends AppCompatActivity {
 
     private void retrieveProfileImage() {
         if (currentUser != null) {
-            db.collection("users")
-                    .document(currentUser.getUid())
-                    .get()
+            storageReference.child(currentUser.getUid() + ".jpg")
+                    .getDownloadUrl()
                     .addOnCompleteListener(task -> {
-                        if (task.isSuccessful() && task.getResult() != null) {
-                            DocumentSnapshot document = task.getResult();
-                            if (document.exists() && document.contains("profileImageURL")) {
-                                String profileImageURL = document.getString("profileImageURL");
-                                Picasso.get().load(profileImageURL).into(homeBannerProfileImageView);
-                                meButton.setOnClickListener(new View.OnClickListener() {
-                                    @Override
-                                    public void onClick(View v) {
-                                        Intent intent = new Intent(homePage.this, viewProfile.class);
-                                        intent.putExtra("profileImageURL", profileImageURL);
-                                        startActivity(intent);
-                                    }
-                                });
-                            }
+                        if (task.isSuccessful()) {
+                            String profileImageURL = task.getResult().toString();
+                            Picasso.get().load(profileImageURL).into(homeBannerProfileImageView);
+                            meButton.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    Intent intent = new Intent(homePage.this, viewProfile.class);
+                                    intent.putExtra("profileImageURL", profileImageURL);
+                                    startActivity(intent);
+                                }
+                            });
+                        } else {
+                            // If the image retrieval fails, set a default profile image
+                            Picasso.get().load(DEFAULT_PROFILE_URL).into(homeBannerProfileImageView);
+                            meButton.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    // Handle click for default image
+                                }
+                            });
                         }
                     });
         }

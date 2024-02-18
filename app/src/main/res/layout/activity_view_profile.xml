@@ -1,5 +1,6 @@
-<!-- Welcome activity layout -->
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/WholescreenLayout"
@@ -7,20 +8,21 @@
     android:layout_height="match_parent"
     android:background="@color/backgroundgray">
 
+    <!-- Image Layout -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/imagelayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="500dp"
-        android:accessibilityTraversalAfter="@id/loginButton"
         android:background="@drawable/banner_app"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <!-- Back Button -->
         <ImageButton
-            android:id="@+id/button_topleft"
+            android:id="@+id/backbutton"
             android:layout_width="75dp"
             android:layout_height="50dp"
             android:layout_marginEnd="334dp"
@@ -36,43 +38,28 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@drawable/ic_back_arrow" />
+            android:src="@drawable/ic_back_arrow" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout"
+        <!-- Profile Image -->
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/addpicture"
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_marginStart="94dp"
             android:layout_marginTop="4dp"
             android:layout_marginEnd="93dp"
             android:layout_marginBottom="50dp"
-            android:background="@drawable/circle"
+            android:contentDescription="shit click to add photo"
+            android:src="@drawable/addimage"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText" />
 
-            <ImageView
-                android:id="@+id/addpicture"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_margin="16dp"
-                android:layout_marginStart="50dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="84dp"
-                android:layout_marginBottom="24dp"
-                android:contentDescription="shit click to add photo"
-                android:src="@drawable/addimage"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="HardcodedText" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
+        <!-- Username TextView -->
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/usernameTextView"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_marginStart="135dp"
@@ -84,9 +71,10 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+            app:layout_constraintTop_toBottomOf="@+id/addpicture" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <!-- Button Layout -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="410dp"
         android:layout_height="498dp"
@@ -96,6 +84,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imagelayout">
 
+        <!-- Edit Profile Button -->
         <Button
             android:id="@+id/editbutton"
             android:layout_width="350dp"
@@ -122,6 +111,7 @@
             app:strokeColor="#8FC4E1"
             app:strokeWidth="2dp" />
 
+        <!-- Change Password Button -->
         <Button
             android:id="@+id/changepwbutton"
             android:layout_width="350dp"
@@ -140,6 +130,7 @@
             app:strokeColor="#8FC4E1"
             app:strokeWidth="2dp" />
 
+        <!-- Logout Button -->
         <Button
             android:id="@+id/logoutbutton"
             android:layout_width="350dp"
@@ -158,6 +149,7 @@
             app:strokeColor="#8FC4E1"
             app:strokeWidth="2dp" />
 
+        <!-- Delete Account Button -->
         <Button
             android:id="@+id/deleteaccount"
             android:layout_width="350dp"
@@ -177,6 +169,4 @@
             app:strokeColor="#FF0000"
             app:strokeWidth="2dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
